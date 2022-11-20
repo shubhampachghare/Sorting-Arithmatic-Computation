@@ -10,7 +10,19 @@ echo "Arithematic compute one is: $(($a+$b*$c))"
 
 function ArithmaticCompute2()
 {
-echo "Arithmatic compute is :$(($a*$b+$c))"
+echo "Arithmatic compute two is :$(($a*$b+$c))"
 } 
 
 ArithmaticCompute2
+
+function ArithmaticCompute3()
+{
+echo "Arithmatic compute three is :$(($c+$a/$b))"
+}
+ArithmaticCompute3
+
+function ArithmaticCompute4()
+{
+echo "Arithmatic compute Four is :$(($a%$b+$c))"
+}
+ArithmaticCompute4
