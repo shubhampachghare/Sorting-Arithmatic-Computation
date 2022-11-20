@@ -4,21 +4,32 @@ read -p "Enter 1st Number" a
 read -p "Enter 2nd Number" b
 read -p "Enter 3rd Number" c
 
+function ArithmaticCompute1()
+{
+echo "$(($a+$b*$c))"
+}
 
-echo "Arithematic compute one is: $(($a+$b*$c))"
-
+result[$((count++))]="$(ArithmaticCompute1 $(($a,$b,$c)))"
 
 function ArithmaticCompute2()
 {
-echo "Arithmatic compute two is :$(($a*$b+$c))"
+echo "$(($a*$b+$c))"
 } 
-
-ArithmaticCompute2
+result[$((count++))]="$(ArithmaticCompute2 $(($a,$b,$c)))"
 
 function ArithmaticCompute3()
 {
-echo "Arithmatic compute three is :$(($c+$a/$b))"
+echo "$(($c+$a/$b))"
 }
-ArithmaticCompute3
+result[$((count++))]="$(ArithmaticCompute3 $(($a,$b,$c)))"
+
+function ArithmaticCompute4()
+{
+echo "$(($a%$b+$c))"
+}
+result[$((count++))]="$(ArithmaticCompute4 $(($a,$b,$c)))"
 
 
+
+echo "${result[@]}"
+echo "${!result[@]}"
