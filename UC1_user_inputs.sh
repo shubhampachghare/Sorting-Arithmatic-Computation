@@ -21,8 +21,4 @@ echo "Arithmatic compute three is :$(($c+$a/$b))"
 }
 ArithmaticCompute3
 
-function ArithmaticCompute4()
-{
-echo "Arithmatic compute Four is :$(($a%$b+$c))"
-}
-ArithmaticCompute4
+
