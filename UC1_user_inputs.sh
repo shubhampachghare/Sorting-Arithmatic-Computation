@@ -59,3 +59,24 @@ function sorting_Array_in_Decending_Order()
 
 res="$( sorting_Array_in_Decending_Order ${arr[@]} )"
 echo "decending order is : $res"
+
+
+function sorting_Array_in_Ascending_Order()
+{
+    for (( i=0; i<4; i++ ))
+    do
+       for (( j=$i+1; j<4; j++ ))
+       do
+          if [[ ${arr[i]} -gt ${arr[j]} ]]
+          then
+               
+               arr[i]=${arr[j]}
+               arr[j]=$temp
+          fi
+       done
+    done
+    echo ${arr[@]}
+}
+
+res1="$( sorting_Array_in_Ascending_Order ${arr[@]} )"
+echo "Ascending order is : $res1"
