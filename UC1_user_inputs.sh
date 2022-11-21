@@ -33,3 +33,9 @@ result[$((count++))]="$(ArithmaticCompute4 $(($a,$b,$c)))"
 
 echo "${result[@]}"
 echo "${!result[@]}"
+
+for (( i=0; i<4; i++ ))
+do
+      arr[i]=${result[$i]}
+      echo "${arr[i]}"
+done
